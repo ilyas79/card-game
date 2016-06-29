@@ -21,6 +21,7 @@
         <![endif]-->
 
 
+        @include('layouts.navigation')
         @yield('content')
 
 
