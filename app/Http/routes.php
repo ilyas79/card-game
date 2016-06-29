@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'HomeController@index');
+
+Route::get('/random_card', 'CardController@randomCard');
+Route::get('/check_card', 'CardController@checkCard');
