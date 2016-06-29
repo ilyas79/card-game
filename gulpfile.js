@@ -15,7 +15,7 @@ elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
     mix.sass('app.scss');
-    mix.scripts('app.js');
+    mix.scripts(['app.js', 'sweetalert.min.js'], 'public/js/app.js');
     mix.browserSync({
         proxy: 'legalzoom.app'
     });
