@@ -12,7 +12,7 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-        <link rel="stylesheet" href="{{ assets('css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
@@ -26,7 +26,7 @@
 
         <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="{{ assets('js/main.js') }}"></script>
+        <script src="{{ asset('js/app.js') }}"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
