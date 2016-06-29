@@ -21,23 +21,42 @@ class Cards
             '11' => 'Jack',
             '12' => 'Queen',
             '13' => 'King',
+            '14' => 'Ace'
         );
     }
 
     public function randomCard()
     {
-        return array_rand($this->cardArray());
+        $randomValue = array_rand($this->cardArray());
+
+        return json_encode([
+            'card_key' => $randomValue,
+            'card_value' => $this->cardArray()[$randomValue]
+        ]);
     }
 
     public function checkIfCardIsHigher($cardValue)
     {
-        $nextCard = $this->randomCard();
+        $nextCard = array_rand($this->cardArray());
+
         if ($cardValue == $nextCard) {
-            return 'Same';
+            return json_encode([
+                'result'     => 'equal',
+                'card_key'   => $nextCard,
+                'card_value' => $this->cardArray()[$nextCard]
+            ]);
         } else if ($cardValue < $nextCard) {
-            return 'Lower';
+            return json_encode([
+                'result'     => 'higher',
+                'card_key'   => $nextCard,
+                'card_value' => $this->cardArray()[$nextCard]
+            ]);
         } else {
-            return 'Higher';
+            return json_encode([
+                'result'     => 'lower',
+                'card_key'   => $nextCard,
+                'card_value' => $this->cardArray()[$nextCard]
+            ]);
         }
     }
 }
